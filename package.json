@@ -1,0 +1,35 @@
+{
+  "name": "vue3-admin-vite-template",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "npx serve dist"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "element-plus": "^1.0.1-beta.2",
+    "js-cookie": "^2.2.1",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "path": "^0.12.7",
+    "path-to-regexp": "^6.2.0",
+    "vue": "^3.0.4",
+    "vue-router": "^4.0.0-rc.6",
+    "vuex": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "autoprefixer": "^9.8.6",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "mockjs": "^1.1.0",
+    "postcss": "^8.2.1",
+    "postcss-import": "^12.0.1",
+    "rollup-svg-sprite-loader": "^1.0.3",
+    "sass": "^1.29.0",
+    "vite": "^1.0.0-rc.13",
+    "vite-plugin-svg-sprite-component": "^1.0.3",
+    "vite-transform-globby-import": "^1.0.0-rc.7"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.vue",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.jsx"
+  ],
+  "exclude": ["node_modules"]
+}
