@@ -1,5 +1,6 @@
 import path from "path"
 import svgPlugin from "vite-plugin-svg-sprite-component"
+import mockServer from "./mock/mock-server"
 
 const sharedConfig = {
   alias: {
@@ -12,11 +13,11 @@ const pathAliasMap = {
 }
 
 /** @type import('vite').UserConfig */
-module.exports = {
+const config = {    
   plugins: [svgPlugin({ symbolId: (name) => "icon-" + name })],
   ...sharedConfig,
   optimizeDeps: {
-    include: ['vue-router']
+    include: []
   },
   resolvers: [
     {
@@ -29,6 +30,9 @@ module.exports = {
       }
     },
   ],
-  transforms: [require('vite-transform-globby-import')(sharedConfig)],
-  configureServer: [require('./mock/mock-server')],
+  transforms: [require('vite-transform-globby-import')(sharedConfig)
+],
+  configureServer: [mockServer],
 }
+
+module.exports = config

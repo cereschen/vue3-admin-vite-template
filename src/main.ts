@@ -1,20 +1,16 @@
 
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
-
 import ElementPlus from 'element-plus'
-import 'element-plus/lib/theme-chalk/index.css'
-
+import 'element-plus/lib/theme-chalk/index.css' 
 import '@/styles/index.scss' // global css
-
 import store from './store'
 import router from './router'
-
 import "@/styles/mixin.scss";
 import "@/styles/variables.scss";
 
 import { registerIcons } from '@/icons' // icon
 import '@/permission' // permission control
-import { mockXHR } from "../mock"
+
 
 /**
  * If you don't want to use mock-server
@@ -25,7 +21,8 @@ import { mockXHR } from "../mock"
  * please remove it before going online ! ! !
  */
 if (process.env.NODE_ENV === 'production') {
-  mockXHR()
+  // const  { mockXHR } = require("../mock")
+  //  mockXHR()
 }
 
 
@@ -35,6 +32,4 @@ import App from './App.vue'
 const app = createApp(App)
 registerIcons(app)
 app.use(ElementPlus).use(store).use(router)
-// router.isReady().then(() => app.mount('#app'))
-
-app.mount('#app')
+ router.isReady().then(() => app.mount('#app'))

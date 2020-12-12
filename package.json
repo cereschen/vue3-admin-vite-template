@@ -1,6 +1,6 @@
 {
   "name": "vue3-admin-vite-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -26,7 +26,6 @@
     "mockjs": "^1.1.0",
     "postcss": "^8.2.1",
     "postcss-import": "^12.0.1",
-    "rollup-svg-sprite-loader": "^1.0.3",
     "sass": "^1.29.0",
     "vite": "^1.0.0-rc.13",
     "vite-plugin-svg-sprite-component": "^1.0.3",

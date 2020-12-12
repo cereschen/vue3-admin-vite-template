@@ -16,7 +16,8 @@
     "src/**/*.vue",
     "src/**/*.js",
     "src/**/*.ts",
-    "src/**/*.jsx"
+    "src/**/*.jsx",
+    "mock/**/*.js"
   ],
   "exclude": ["node_modules"]
 }

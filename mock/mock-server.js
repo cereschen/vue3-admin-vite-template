@@ -5,6 +5,7 @@ const path = require('path')
 const Mock = require('mockjs')
 const koaRouter = require('koa-router');
 const router = new koaRouter()
+import {mocks} from "./index"
 
 const mockDir = path.join(process.cwd(), 'mock')
 
@@ -14,7 +15,7 @@ const mockDir = path.join(process.cwd(), 'mock')
  */
 function registerRoutes(app) {
    let mockLastIndex
-  const { mocks } = require('./index.js')
+
   const mocksForServer = mocks.map(route => {
     return responseFake(route.url, route.type, route.response)
   })
@@ -54,7 +55,7 @@ const responseFake = (url, type, respond) => {
   }
 }
 /** @type import('vite').ServerPlugin */
-module.exports = ({ app }) => {
+export default  ({ app }) => {
   // parse app.body
   // https://expressjs.com/en/4x/api.html#req.body
   app.use(bodyParser())
