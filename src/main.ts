@@ -10,7 +10,7 @@ import "@/styles/variables.scss";
 
 import { registerIcons } from '@/icons' // icon
 import '@/permission' // permission control
-
+import {mockXHR} from "../mock"
 
 /**
  * If you don't want to use mock-server
@@ -21,8 +21,7 @@ import '@/permission' // permission control
  * please remove it before going online ! ! !
  */
 if (process.env.NODE_ENV === 'production') {
-  // const  { mockXHR } = require("../mock")
-  //  mockXHR()
+   mockXHR()
 }
 
 

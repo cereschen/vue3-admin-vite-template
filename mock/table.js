@@ -1,4 +1,4 @@
-const Mock = require('mockjs')
+import * as Mock from "mockjs"
 
 const data = Mock.mock({
   'items|30': [{
