@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/sidebar.scss";
+@import "../styles/variables.scss";
 @import "../styles/mixin.scss";
   .app-wrapper {
     @include clearfix;
