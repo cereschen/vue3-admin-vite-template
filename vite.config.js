@@ -5,6 +5,7 @@ import mockServer from "./mock/mock-server"
 const sharedConfig = {
   alias: {
     '/@/': path.resolve(__dirname, 'src'),
+    'path':'path-browserify'
   }
 }
 

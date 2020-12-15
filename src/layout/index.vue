@@ -51,15 +51,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-$sideBarWidth: 210px;
-
+@import "../styles/sidebar.scss";
+@import "../styles/mixin.scss";
   .app-wrapper {
     @include clearfix;
     position: relative;

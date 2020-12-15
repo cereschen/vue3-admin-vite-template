@@ -1,6 +1,7 @@
 {
   "name": "vue3-admin-vite-template",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,7 +13,7 @@
     "js-cookie": "^2.2.1",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
-    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
     "path-to-regexp": "^6.2.0",
     "vue": "^3.0.4",
     "vue-router": "^4.0.0-rc.6",
