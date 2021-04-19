@@ -36,7 +36,7 @@
 <script lang="ts">
 import path from 'path'
 import { isExternal } from '@/utils/validate'
-import Item from './Item.jsx'
+import Item from './Item'
 import AppLink from './Link.vue'
 import FixiOSBug from './FixiOSBug'
 import { defineComponent, PropType, ref } from 'vue'

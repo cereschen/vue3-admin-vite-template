@@ -4,15 +4,4 @@ declare module '*.vue' {
   export default Component;
 }
 
-declare module 'globby!/*.@(svg)' {
-  const icons: Record<string, string>
-  export default icons
-}
-
-declare module '*.scss' {
-
-  const scss: Record<string, string>
-  export default scss;
-}
-
 

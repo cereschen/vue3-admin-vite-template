@@ -149,7 +149,7 @@ export const constantRoutes = [
     component: Layout,
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
+        path: 'https://github.com/cereschen/vue3-admin-vite-template',
         meta: { title: 'External Link', icon: 'link' }
       }
     ]

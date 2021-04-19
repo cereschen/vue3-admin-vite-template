@@ -1,5 +1,7 @@
 
-const tokens = {
+import { MockMethod } from 'vite-plugin-mock';
+
+const tokens: Record<string, { token: string }> = {
   admin: {
     token: 'admin-token'
   },
@@ -8,7 +10,7 @@ const tokens = {
   }
 }
 
-const users = {
+const users: Record<string, { roles: string[], introduction: string, avatar: string, name: string }> = {
   'admin-token': {
     roles: ['admin'],
     introduction: 'I am a super administrator',
@@ -23,14 +25,14 @@ const users = {
   }
 }
 
-export default  [
+
+const mocks: MockMethod[] = [
   // user login
   {
     url: '/vue-admin-template/user/login',
-    type: 'post',
-    response: config => {
-      console.log(config)
-      const { username } = config.body
+    method: 'post',
+    response: ({ body }) => {
+      const { username } = body
       const token = tokens[username]
 
       // mock error
@@ -47,13 +49,12 @@ export default  [
       }
     }
   },
-
   // get user info
   {
-    url: '/vue-admin-template/user/info\.*',
-    type: 'get',
-    response: config => {
-      const { token } = config.query
+    url: '/vue-admin-template/user/info',
+    method: 'get',
+    response: ({ query }) => {
+      const { token } = query
       const info = users[token]
 
       // mock error
@@ -70,11 +71,10 @@ export default  [
       }
     }
   },
-
   // user logout
   {
     url: '/vue-admin-template/user/logout',
-    type: 'post',
+    method: 'post',
     response: _ => {
       return {
         code: 20000,
@@ -82,4 +82,9 @@ export default  [
       }
     }
   }
-]
+];
+
+
+
+
+export default mocks

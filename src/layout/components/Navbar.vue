@@ -19,11 +19,8 @@
             <router-link to="/">
               <el-dropdown-item>Home</el-dropdown-item>
             </router-link>
-            <a target="_blank" href="https://github.com/PanJiaChen/vue-admin-template/">
+            <a target="_blank" href="https://github.com/cereschen/vue3-admin-vite-template">
               <el-dropdown-item>Github</el-dropdown-item>
-            </a>
-            <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
-              <el-dropdown-item>Docs</el-dropdown-item>
             </a>
             <el-dropdown-item divided @click.native="logout">
               <span style="display:block;">Log Out</span>
@@ -36,7 +33,7 @@
 </template>
 
 <script lang="ts">
-import { mapGetters, useStore } from 'vuex'
+import { useStore } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb/index.vue'
 import Hamburger from '@/components/Hamburger/index.vue'
 import { defineComponent } from 'vue'

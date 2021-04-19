@@ -1,4 +1,5 @@
 import * as Mock from "mockjs"
+import { MockMethod } from 'vite-plugin-mock';
 
 const data = Mock.mock({
   'items|30': [{
@@ -11,10 +12,10 @@ const data = Mock.mock({
   }]
 })
 
-export default  [
+export default [
   {
     url: '/vue-admin-template/table/list',
-    type: 'get',
+    method: 'get',
     response: config => {
       const items = data.items
       return {
@@ -26,4 +27,4 @@ export default  [
       }
     }
   }
-]
+] as MockMethod[]

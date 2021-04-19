@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
+    "module": "esNext",
     "noEmit": true,
     "allowJs": true,
     "baseUrl": ".",
+    "lib": [
+      "ESNext"
+    ],
     "strict": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "jsx": "preserve",
+    "types": [
+      "vite/client"
+    ],
     "paths": {
       "@/*": [
         "src/*"
@@ -18,6 +26,8 @@
     "src/**/*.ts",
     "src/**/*.jsx",
     "mock/**/*.js"
-  ],
-  "exclude": ["node_modules"]
+, "mock/user.ts", "mock/table.ts"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
